@@ -1,5 +1,11 @@
 # Spring Integration JDBC lock - transaction serialization error
 
+**UPDATE**:
+This issue was present in Spring Integration release `4.3.5` and was fixed in `4.3.6`/`5.0.0`.
+See [INT-4178](https://jira.spring.io/browse/INT-4178) and [this PR](https://github.com/spring-projects/spring-integration/pull/1991).
+
+---
+
 This is a minimal project to demonstrate transaction serialization exception that occurs when using `JdbcLockRegistry` based `LockRegistryLeaderInitiator` on PostgreSQL. 
 
 The project assumes there is a PostgreSQL database named `test` available on `localhost:5432` and database user `user` with password `user` according to `application.properties`:
